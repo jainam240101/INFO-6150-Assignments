@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+header h1{
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+header a{
+    background: none;
+    border-radius: 10px;
+    text-decoration: none;
+    border:1px solid white;
+    color: white;
+    padding: 10px 20px;
+}
+
+header a:hover{
+    cursor: pointer;
+}
+
+.background{
+    background-image: url("./images/hero_1.jpg");
+    background-size: cover;
+    min-height: 80vh;
+}
+
+.heading{
+    padding-left: 50px;
+    color: white;
+    width: 50%;
+    padding-top: 10%;
+    font-size: 55px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.orangeHeading{
+    font-family: 'Roboto', sans-serif;
+    color:#fc8621;
+}
+.Container{
+    display: flex;
+    padding: 0 100px;
+    margin-top: 100px;
+}
+
+.aboutHeading{
+    font-family: 'Open-Sans', sans-serif;
+    margin-top: 20px;
+    font-size: 35px;
+    width: 75%;
+    font-weight: 800;
+}
+
+.aboutSubHeading{
+    width: 70%;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.aboutImage img{
+    width: 350px;
+    height: 350px;
+}
+
+.destinationHeading{
+    font-family: 'Open-Sans', sans-serif;
+    margin-top: 20px;
+    font-size: 35px;
+    width: 75%;
+    font-weight: 800;
+}
+
+.destinationsubHeading{
+    width: 70%;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.grid{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 100px;
+    margin-top: 50px;
+}
+
+.gridImage{
+    width: 250px;
+    /* height: 250px; */
+}
+.gridHeading{
+    font-family: 'Open-Sans', sans-serif;
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.form{
+    margin-top: 100px;   
+    padding: 0 100px;
+}
+
+.formHeading{
+    font-size: 35px;
+    text-align: center;
+}
+
+input{
+    width: 100%;
+}
+
+.formDiv{
+    margin-top: 20px;
+    display: flex;
+}
+.formDiv input{
+    padding: 10px;
+    border:1px solid black;
+    background: none;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.formDiv input:focus{
+    outline: none;
+}
+
+.formDiv select{
+    margin-left: 20px;
+}
+
+form textarea:focus{
+    outline: none;
+}
+
+form textarea{
+    border-radius: 5px;
+    resize: vertical;
+    margin-top: 20px;
+    width: 90%;
+    padding:10px;
+    height: 150px;
+}
+
+form button{
+    background-color: #00b894;
+    border:1px solid #00b894;
+    color:white;
+    font-weight: 800;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+section{
+    background-color: #fc8621;
+    padding: 30px 80px;
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+section h1{
+    font-family: 'Open-Sans', sans-serif;
+    color:white;
+}
+
+section button{
+    padding: 10px 20px;
+    background:none;
+    border:1px solid white;
+    border-radius: 100px;
+    color:white;
+}
+
+section button:hover{
+    color: #fc8621;
+    cursor: pointer;
+    background-color: white;
+}
