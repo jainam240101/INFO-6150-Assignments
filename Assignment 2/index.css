@@ -444,4 +444,7 @@ footer {
   .experienceCard li {
     width: 350px;
   }
+  footer{
+    margin-left: 0%;
+  }
 }
