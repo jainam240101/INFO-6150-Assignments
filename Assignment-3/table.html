@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<!-- Also read chapter 9 from slides - Regular Expressions -->
+
+<html>
+  <head>
+    <title>Table CheckList</title>
+    <link rel="stylesheet" type="text/css" href="table.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <table id="myTable">
+      <tr>
+        <th></th>
+        <th>STUDENT</th>
+        <th>ADVISOR</th>
+        <th>AWARD<br />STATUS</th>
+        <th>SEMESTER</th>
+        <th>TYPE</th>
+        <th>BUDGET<br />#</th>
+        <th>PERCENTAGE</th>
+        <th>DELETE</th>
+        <th>EDIT</th>
+      </tr>
+      <tr id="row1">
+        <td>
+          <input
+            onchange="toggleCheckbox('row1','deleteBtn1','editBtn1')"
+            type="checkbox"
+          /><br /><br /><img onclick="toggleTextArea('dropDownTextArea1')" src="down.png" width="25px" />
+        </td>
+        <td>Student 1</td>
+        <td>Teacher 1</td>
+        <td>Approved</td>
+        <td>Fall</td>
+        <td>TA</td>
+        <td>12345</td>
+        <td>100%</td>
+        <td>
+          <button
+            onclick="deleteRow('row1','dropDownTextArea1')"
+            class="deleteBtn"
+            id="deleteBtn1"
+          >
+            Delete
+          </button>
+        </td>
+        <td>
+          <button onclick="editButton()" class="deleteBtn" id="editBtn1">
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr id="dropDownTextArea1" class="dropDownTextArea">
+        <td colspan="8">
+          Advisor:<br /><br />
+          Award Details<br />
+          Summer 1-2014(TA)<br />
+          Budget Number: <br />
+          Tuition Number: <br />
+          Comments:<br /><br /><br />
+          Award Status:<br /><br /><br />
+        </td>
+      </tr>
+      <tr id="row2">
+        <td>
+          <input
+            onchange="toggleCheckbox('row2','deleteBtn2','editBtn2')"
+            type="checkbox"
+          /><br /><br /><img onclick="toggleTextArea('dropDownTextArea2')" src="down.png" width="25px" />
+        </td>
+        <td>Student 2</td>
+        <td>Teacher 2</td>
+        <td>Approved</td>
+        <td>Fall</td>
+        <td>TA</td>
+        <td>23456</td>
+        <td>100%</td>
+        <td>
+          <button
+            onclick="deleteRow('row2','dropDownTextArea2')"
+            class="deleteBtn"
+            id="deleteBtn2"
+          >
+            Delete
+          </button>
+        </td>
+        <td>
+          <button onclick="editButton()" class="deleteBtn" id="editBtn2">
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr id="dropDownTextArea2" class="dropDownTextArea">
+        <td colspan="8">
+          Advisor:<br /><br />
+          Award Details<br />
+          Summer 1-2014(TA)<br />
+          Budget Number: <br />
+          Tuition Number: <br />
+          Comments:<br /><br /><br />
+          Award Status:<br /><br /><br />
+        </td>
+      </tr>
+      <tr id="row3">
+        <td>
+          <input
+            onchange="toggleCheckbox('row3','deleteBtn3','editBtn3')"
+            type="checkbox"
+          /><br /><br /><img onclick="toggleTextArea('dropDownTextArea3')" src="down.png" width="25px" />
+        </td>
+        <td>Student 3</td>
+        <td>Teacher 3</td>
+        <td>Approved</td>
+        <td>Fall</td>
+        <td>TA</td>
+        <td>34567</td>
+        <td>100%</td>
+        <td>
+          <button
+            onclick="deleteRow('row3','dropDownTextArea3')"
+            class="deleteBtn"
+            id="deleteBtn3"
+          >
+            Delete
+          </button>
+        </td>
+		 <td>
+          <button
+            onclick="editButton()"
+            class="deleteBtn"
+            id="editBtn3"
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr id="dropDownTextArea3" class="dropDownTextArea">
+        <td colspan="8">
+          Advisor:<br /><br />
+          Award Details<br />
+          Summer 1-2014(TA)<br />
+          Budget Number: <br />
+          Tuition Number: <br />
+          Comments:<br /><br /><br />
+          Award Status:<br /><br /><br />
+        </td>
+      </tr>
+    </table>
+
+    <br /><br />
+
+    <button id="button">SUBMIT SELECTED AWARDS</button>
+    <button onclick="addStudent()" id="add">Add New Student</button>
+
+    <nav class="socialmediaicons"></nav>
+    <script src="script.js"></script>
+  </body>
+</html>
