@@ -19,8 +19,8 @@
         <th>TYPE</th>
         <th>BUDGET<br />#</th>
         <th>PERCENTAGE</th>
-        <th>DELETE</th>
-        <th>EDIT</th>
+        <th class="button_del" id="deleteCol">DELETE</th>
+        <th class="button_edit" id="editCol">EDIT</th>
       </tr>
       <tr id="row1">
         <td>
@@ -42,21 +42,21 @@
         <td>100%</td>
         <td>
           <button
+            class="button_del"
             onclick="deleteRow('row1','dropDownTextArea1')"
-            class="deleteBtn"
             id="deleteBtn1"
           >
             Delete
           </button>
         </td>
         <td>
-          <button onclick="editButton()" class="deleteBtn" id="editBtn1">
+          <button onclick="editButton()" class="button_edit" id="editBtn1">
             Edit
           </button>
         </td>
       </tr>
       <tr id="dropDownTextArea1" style="display: none">
-        <td colspan="10">
+        <td colspan="8">
           Advisor:<br /><br />
           Award Details<br />
           Summer 1-2014(TA)<br />
@@ -87,20 +87,20 @@
         <td>
           <button
             onclick="deleteRow('row2','dropDownTextArea2')"
-            class="deleteBtn"
+            class="button_del"
             id="deleteBtn2"
           >
             Delete
           </button>
         </td>
         <td>
-          <button onclick="editButton()" class="deleteBtn" id="editBtn2">
+          <button onclick="editButton()" class="button_edit" id="editBtn2">
             Edit
           </button>
         </td>
       </tr>
       <tr id="dropDownTextArea2" style="display: none">
-        <td colspan="10">
+        <td colspan="8">
           Advisor:<br /><br />
           Award Details<br />
           Summer 1-2014(TA)<br />
@@ -131,20 +131,20 @@
         <td>
           <button
             onclick="deleteRow('row3','dropDownTextArea3')"
-            class="deleteBtn"
+            class="button_del"
             id="deleteBtn3"
           >
             Delete
           </button>
         </td>
         <td>
-          <button onclick="editButton()" class="deleteBtn" id="editBtn3">
+          <button onclick="editButton()" class="button_edit" id="editBtn3">
             Edit
           </button>
         </td>
       </tr>
       <tr id="dropDownTextArea3" style="display: none">
-        <td colspan="10">
+        <td colspan="8">
           Advisor:<br /><br />
           Award Details<br />
           Summer 1-2014(TA)<br />

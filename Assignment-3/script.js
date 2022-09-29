@@ -47,8 +47,8 @@ function addStudent() {
   <td>TA</td>
   <td>12345</td>
   <td>100%</td>
-  <td><button onclick="deleteRow('${newId}','dropDownTextArea${count}')" class="deleteBtn" id=${buttonId}>Delete</button></td>
-  <td><button onclick="editButton()" class="deleteBtn" id="editBtn${count}">Edit</button></td>
+  <td><button class="button_del" onclick="deleteRow('${newId}','dropDownTextArea${count}')" class="deleteBtn" id=${buttonId}>Delete</button></td>
+  <td><button class="button_edit" onclick="editButton()" class="deleteBtn" id="editBtn${count}">Edit</button></td>
   </tr>
   `;
 
@@ -78,6 +78,8 @@ function toggleCheckbox(rowId, buttonId, editBtnId) {
     document.getElementById("button").style.borderColor = "orange";
     document.getElementById(buttonId).style.display = "block";
     document.getElementById(editBtnId).style.display = "block";
+    document.getElementById("deleteCol").style.display = "revert";
+    document.getElementById("editCol").style.display = "revert";
     selectedCount++;
   } else {
     selectedCount--;
@@ -86,6 +88,8 @@ function toggleCheckbox(rowId, buttonId, editBtnId) {
       document.getElementById("button").disabled = true;
       document.getElementById("button").style.backgroundColor = "gray";
       document.getElementById("button").style.borderColor = "gray";
+      document.getElementById("deleteCol").style.display = "none";
+      document.getElementById("editCol").style.display = "none";
     }
     document.getElementById(buttonId).style.display = "none";
     document.getElementById(editBtnId).style.display = "none";
@@ -102,12 +106,14 @@ function deleteRow(rowId, textAreaId) {
     document.getElementById("button").disabled = true;
     document.getElementById("button").style.backgroundColor = "gray";
     document.getElementById("button").style.borderColor = "gray";
+    document.getElementById("deleteCol").style.display = "none";
+    document.getElementById("editCol").style.display = "none";
   }
   alert("Row Deleted Successfully");
 }
 
 function editButton() {
-  alert("Editing the Details");
+  prompt("Editing the Details");
 }
 
 function toggleTextArea(dropDownTextAreaId) {

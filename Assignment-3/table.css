@@ -28,6 +28,10 @@ th {
   display: none;
 }
 
-.deleteBtn {
+.button_del{
+  display: none;
+}
+
+.button_edit{
   display: none;
 }
