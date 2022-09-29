@@ -24,7 +24,6 @@ var count = 4;
 var selectedCount = 0;
 
 function addStudent() {
-  console.log("Function called");
   var tableRef = document
     .getElementById("myTable")
     .getElementsByTagName("tbody")[0];
@@ -35,7 +34,7 @@ function addStudent() {
 
   var dropdowntext = tableRef.insertRow(tableRef.rows.length);
   dropdowntext.id = `dropDownTextArea${count}`;
-  dropdowntext.className = "dropDownTextArea";
+  dropdowntext.style.display = "none";
 
   row.id = newId;
   row.innerHTML = `
@@ -54,8 +53,8 @@ function addStudent() {
   `;
 
   dropdowntext.innerHTML = `
-    <tr>
-        <td colspan="8">
+    <tr 
+        <td colspan="10">
           Advisor:<br /><br />
           Award Details<br />
           Summer 1-2014(TA)<br />
@@ -94,8 +93,6 @@ function toggleCheckbox(rowId, buttonId, editBtnId) {
 }
 
 function deleteRow(rowId, textAreaId) {
-  console.log(rowId);
-  console.log(textAreaId);
   var row = document.getElementById(rowId);
   row.parentNode.removeChild(row);
   var textAreaRow = document.getElementById(textAreaId);
@@ -115,10 +112,9 @@ function editButton() {
 
 function toggleTextArea(dropDownTextAreaId) {
   var dropdown = document.getElementById(dropDownTextAreaId).style;
-  console.log("ropdown.display ", dropdown.display);
-  if (dropdown.display === "") {
-    dropdown.display = "block";
-  } else {
+  if (dropdown.display === "none") {
     dropdown.display = "";
+  } else {
+    dropdown.display = "none";
   }
 }
