@@ -1,0 +1,55 @@
+%slideshow-template {
+  overflow: hidden;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.631);
+  padding: 10px 10px 10px 10px;
+  width: 80%;
+  margin: 2% auto;
+}
+
+#slideshow {
+  @extend %slideshow-template;
+
+  .slide-wrapper {
+    width: calc(728px * 4);
+
+    animation: slide 10s ease infinite;
+
+    .slide {
+      float: left;
+      height: 100%;
+      width: 20%;
+
+      a {
+        background-color: red;
+      }
+
+      img {
+        width: 500px;
+        height: 300px;
+      }
+    }
+
+    @mixin margin-interpolation($margin) {
+      margin-left: $margin;
+    }
+
+    @keyframes slide {
+      20% {
+        @include margin-interpolation(0px);
+      }
+
+      40% {
+        @include margin-interpolation(-728px * 1);
+      }
+
+      60% {
+        @include margin-interpolation(-728px * 2);
+      }
+
+      80% {
+        @include margin-interpolation(-728px * 1);
+      }
+    }
+  }
+}

@@ -1,0 +1,242 @@
+@import 'variables';
+@import 'slideshow';
+@import 'mixin';
+@import 'placeholder_selector';
+
+$myFont: Helvetica, sans-serif;
+$myColor: rgb(0, 0, 0);
+$myBackImage: url(images/background_image.jpeg);
+$myFontSize: 18px;
+$myWidth: 180px;
+$responsivewidth: 800px;
+
+:root {
+  --main-bg-color: brown;
+}
+
+// @function speed(x`) {
+//   $inverse: change-color($color, $hue: hue($color) + 180);
+//   @return mix($inverse, $color, $amount);
+// }
+
+#container {
+  width: $myWidth;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: $myColor;
+  background-image: $myBackImage;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  nav {
+    p {
+      font-size: 120%;
+    }
+  }
+
+  header {
+    color: white;
+    font-size: 150%;
+    text-align: center;
+  }
+
+  header h1:before,
+  header h1:after {
+    background-color: rgb(255, 0, 0);
+    content: '';
+    display: inline-block;
+    height: 10px;
+    position: relative;
+    vertical-align: middle;
+    width: 30%;
+  }
+
+  header h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+
+  header h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+
+  footer {
+    @extend %footer_style;
+  }
+
+  footer h3:before,
+  footer h3:after {
+    background-color: rgb(255, 255, 255);
+    content: '';
+    display: inline-block;
+    height: 5px;
+    position: relative;
+    vertical-align: middle;
+    width: 20%;
+  }
+
+  footer h3:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+
+  footer h3:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+
+  nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--main-bg-color);
+
+    a {
+      display: block;
+      color: white;
+      font-size: 120%;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+
+      &:hover:not(.active) {
+        background-color: rgb(255, 255, 255);
+        color: #111;
+      }
+
+      .active {
+        background-color: #ffffff;
+        color: #111;
+
+        &:hover {
+          background-color: gold;
+        }
+      }
+    }
+  }
+
+  #History {
+    display: flex;
+    margin-top: 10%;
+    justify-content: space-around;
+
+    #HistoryText {
+      color: white;
+      width: 50%;
+      float: left;
+      font-size: 120%;
+      margin-top: 10%;
+      margin-left: 10%;
+      clear: both;
+    }
+    #HistoryVideo {
+      justify-content: right;
+      clear: both;
+      float: right;
+      width: 50%;
+    }
+  }
+
+  #DriverView {
+    display: flex;
+    margin-top: 10%;
+    justify-content: space-around;
+
+    #DriverText {
+      color: white;
+      width: 50%;
+      float: right;
+      margin-right: 5%;
+      clear: both;
+
+      h2 span {
+        @include text-span();
+      }
+
+      p {
+        font-size: 130%;
+      }
+    }
+
+    #DriverImage {
+      justify-content: right;
+      clear: both;
+      float: left;
+      width: 50%;
+      margin-left: 10%;
+
+      img {
+        width: 80%;
+        height: 100%;
+      }
+    }
+  }
+
+  .cars_collection {
+    h2 {
+      color: white;
+      margin: 10% auto;
+      text-align: center;
+      font-size: 160%;
+    }
+  }
+
+  @media (max-width: $responsivewidth) {
+    .Grid_Inner {
+      flex: 50%;
+      max-width: 100%;
+    }
+    header h1 {
+      font-size: 100%;
+    }
+
+    footer h3 {
+      font-size: 50%;
+    }
+
+    #History {
+      display: flex;
+      justify-content: space-around;
+      flex-flow: column !important;
+
+      #HistoryText h2 {
+        text-align: center;
+        font-size: 130%;
+      }
+    }
+    #DriverView {
+      display: flex;
+      margin-top: 10%;
+      justify-content: space-around;
+      flex-flow: column !important;
+
+      #DriverImage {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      #DriverText {
+        width: 100%;
+        text-align: center;
+      }
+      #DriverText h2 {
+        font-size: 130%;
+        text-align: start;
+      }
+      #DriverText p {
+        font-size: 100%;
+        text-align: center;
+      }
+    }
+
+    #leaderboard h1 {
+      font-size: 130%;
+    }
+  }
+}

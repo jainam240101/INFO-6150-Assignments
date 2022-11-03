@@ -1,0 +1,249 @@
+#slideshow {
+  overflow: hidden;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.631);
+  padding: 10px 10px 10px 10px;
+  width: 80%;
+  margin: 2% auto;
+}
+
+#slideshow .slide-wrapper {
+  width: 2912px;
+  -webkit-animation: slide 10s ease infinite;
+          animation: slide 10s ease infinite;
+}
+#slideshow .slide-wrapper .slide {
+  float: left;
+  height: 100%;
+  width: 20%;
+}
+#slideshow .slide-wrapper .slide a {
+  background-color: red;
+}
+#slideshow .slide-wrapper .slide img {
+  width: 500px;
+  height: 300px;
+}
+@-webkit-keyframes slide {
+  20% {
+    margin-left: 0px;
+  }
+  40% {
+    margin-left: -728px;
+  }
+  60% {
+    margin-left: -1456px;
+  }
+  80% {
+    margin-left: -728px;
+  }
+}
+@keyframes slide {
+  20% {
+    margin-left: 0px;
+  }
+  40% {
+    margin-left: -728px;
+  }
+  60% {
+    margin-left: -1456px;
+  }
+  80% {
+    margin-left: -728px;
+  }
+}
+
+body footer {
+  text-align: center;
+  color: rgb(243, 112, 112);
+  margin-top: 5%;
+}
+
+:root {
+  --main-bg-color: brown;
+}
+
+#container {
+  width: 180px;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  background-image: url(images/background_image.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body nav p {
+  font-size: 120%;
+}
+body header {
+  color: white;
+  font-size: 150%;
+  text-align: center;
+}
+body header h1:before,
+body header h1:after {
+  background-color: rgb(255, 0, 0);
+  content: "";
+  display: inline-block;
+  height: 10px;
+  position: relative;
+  vertical-align: middle;
+  width: 30%;
+}
+body header h1:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+body header h1:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+body footer h3:before,
+body footer h3:after {
+  background-color: rgb(255, 255, 255);
+  content: "";
+  display: inline-block;
+  height: 5px;
+  position: relative;
+  vertical-align: middle;
+  width: 20%;
+}
+body footer h3:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+body footer h3:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+body nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--main-bg-color);
+}
+body nav a {
+  display: block;
+  color: white;
+  font-size: 120%;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+body nav a:hover:not(.active) {
+  background-color: rgb(255, 255, 255);
+  color: #111;
+}
+body nav a .active {
+  background-color: #ffffff;
+  color: #111;
+}
+body nav a .active:hover {
+  background-color: gold;
+}
+body #History {
+  display: flex;
+  margin-top: 10%;
+  justify-content: space-around;
+}
+body #History #HistoryText {
+  color: white;
+  width: 50%;
+  float: left;
+  font-size: 120%;
+  margin-top: 10%;
+  margin-left: 10%;
+  clear: both;
+}
+body #History #HistoryVideo {
+  justify-content: right;
+  clear: both;
+  float: right;
+  width: 50%;
+}
+body #DriverView {
+  display: flex;
+  margin-top: 10%;
+  justify-content: space-around;
+}
+body #DriverView #DriverText {
+  color: white;
+  width: 50%;
+  float: right;
+  margin-right: 5%;
+  clear: both;
+}
+body #DriverView #DriverText h2 span {
+  font-family: "Courier New", Courier, monospace;
+  padding: 10px 10px;
+}
+body #DriverView #DriverText p {
+  font-size: 130%;
+}
+body #DriverView #DriverImage {
+  justify-content: right;
+  clear: both;
+  float: left;
+  width: 50%;
+  margin-left: 10%;
+}
+body #DriverView #DriverImage img {
+  width: 80%;
+  height: 100%;
+}
+body .cars_collection h2 {
+  color: white;
+  margin: 10% auto;
+  text-align: center;
+  font-size: 160%;
+}
+@media (max-width: 800px) {
+  body .Grid_Inner {
+    flex: 50%;
+    max-width: 100%;
+  }
+  body header h1 {
+    font-size: 100%;
+  }
+  body footer h3 {
+    font-size: 50%;
+  }
+  body #History {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column !important;
+  }
+  body #History #HistoryText h2 {
+    text-align: center;
+    font-size: 130%;
+  }
+  body #DriverView {
+    display: flex;
+    margin-top: 10%;
+    justify-content: space-around;
+    flex-flow: column !important;
+  }
+  body #DriverView #DriverImage img {
+    width: 100%;
+    height: 100%;
+  }
+  body #DriverView #DriverText {
+    width: 100%;
+    text-align: center;
+  }
+  body #DriverView #DriverText h2 {
+    font-size: 130%;
+    text-align: start;
+  }
+  body #DriverView #DriverText p {
+    font-size: 100%;
+    text-align: center;
+  }
+  body #leaderboard h1 {
+    font-size: 130%;
+  }
+}/*# sourceMappingURL=main.css.map */
