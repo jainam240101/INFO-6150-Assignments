@@ -1,0 +1,40 @@
+@use '../abstracts' as a;
+@import '../abstracts/mixin';
+@import '../abstracts/variables';
+
+@media (max-width: $responsivewidth) {
+    #about {
+        height: 200vh;
+
+        #sexyText {
+            @include text-span-2()
+        }
+    }
+
+}
+
+#sexyText {
+    @include text-span()
+}
+
+@function add($a,$b){
+    @return #{$a+$b}px;
+}
+
+%toolbelt {
+    &:hover { border: 2px rgba(#000, .5)  solid; }
+  }
+
+.flexContainer{
+    --blackColor:black;
+    @extend %toolbelt;
+    display: flex; 
+    background-color: var(--blackColor);
+    padding-left: add(10,10);
+    padding-right: add(10,10); 
+    justify-content: center;
+}
+
+.rightFlex{
+    margin-left: #{10px+10px};
+}

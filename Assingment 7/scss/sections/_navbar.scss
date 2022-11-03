@@ -1,0 +1,32 @@
+
+.navbar {
+    border-bottom: 1px solid darken(white, 20%);
+    a {
+        display: block;
+        color: white;
+        font-size: 120%;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    
+        &:hover:not(.active), %strong-alert {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 251, 251);
+          
+        }
+        
+    
+        .active {
+          background-color: #ffffff;
+          color: #111;
+    
+          &:hover {
+            background-color: gold;
+          }
+        }
+      }
+      %strong-alert:hover {
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 251, 251);
+      }
+}

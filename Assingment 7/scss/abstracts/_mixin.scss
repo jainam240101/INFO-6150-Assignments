@@ -1,0 +1,14 @@
+
+@mixin text-span {
+    font-family: $heading-font-family;
+    padding: 10px 10px;
+    font-size: 30px;
+    text-align:center
+}
+
+@mixin text-span-2 {
+    font-family: $body-font-family;
+    padding: 10px 10px;
+    font-size: 25px;
+    text-align:center
+}
