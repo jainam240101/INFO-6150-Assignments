@@ -15,12 +15,3 @@ External Fonts have been added
 4 - nesting interploations done - Used in Navigation
 5 - Custom Properties - Used in About Container
 6 - Placeholders are implemented to extend same SASS properties 
-
-# Directions to Open ->
-Q2->
--/img
--/SCSS
--/CSS
--/index.html
-
-    Right click on index.html and open with live server
