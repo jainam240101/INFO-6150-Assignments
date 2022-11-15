@@ -1,5 +1,5 @@
 import { userModel } from "../schemas/User";
-import { encryptPassword } from "../utils/bcrypt";
+import { encryptPassword, verifyHash } from "../utils/bcrypt";
 import { sendErrorResponse, sendSuccessResponse } from "../utils/response";
 import { passwordStrength } from "check-password-strength";
 
@@ -79,5 +79,28 @@ export const getAllUsers = async (req, res) => {
     sendSuccessResponse(res, users);
   } catch (error) {
     sendErrorResponse(res, error.message);
+  }
+};
+
+export const loginHandler = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    if (email === undefined) {
+      throw new Error("Email Missing");
+    } else if (password === undefined) {
+      throw new Error("Password Missing");
+    }
+
+    const user = await userModel.find({ email: email });
+    if (user.length === 0) throw new Error("User Not Found");
+
+    const verify = await verifyHash(password, user[0].password);
+
+    if (!verify) throw new Error("Password Incorrect");
+
+    sendSuccessResponse(res, { message: "Login Successfully" });
+  } catch (error) {
+   sendErrorResponse(res, error.message);
   }
 };
