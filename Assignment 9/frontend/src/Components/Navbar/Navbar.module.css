@@ -1,7 +1,13 @@
 .Container {
-  margin: 10px 0;
+  padding: 10px 0;
   display: flex;
   justify-content: center;
+}
+
+.Container a{
+  color:white;
+  text-decoration: none;
+
 }
 
 .Container a {

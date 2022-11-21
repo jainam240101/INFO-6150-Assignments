@@ -1,10 +1,16 @@
-import React from 'react'
-import Navbar from '../../Components/Navbar/Navbar';
-import PageCard from '../../Components/PageCard/PageCard';
+import React from "react";
+import Navbar from "../../Components/Navbar/Navbar";
+import PageCard from "../../Components/PageCard/PageCard";
 
 const Contact = () => {
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "#273c75",
+        height: "100vh",
+        color: "white",
+      }}
+    >
       <Navbar />
       <PageCard
         title={"Contact Page"}
@@ -14,6 +20,6 @@ const Contact = () => {
       />
     </div>
   );
-}
+};
 
-export default Contact
+export default Contact;

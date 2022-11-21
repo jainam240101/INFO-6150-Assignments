@@ -4,7 +4,13 @@ import PageCard from "../../Components/PageCard/PageCard";
 
 const Jobs = () => {
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "#0a3d62",
+        height: "100vh",
+        color: "white",
+      }}
+    >
       <Navbar />
       <PageCard
         title={"Jobs Page"}

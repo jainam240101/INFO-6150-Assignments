@@ -16,7 +16,7 @@ const About = () => {
   }, []);
 
   return (
-    <div>
+    <div className={classes.Container}>
       <Navbar />
       <PageCard
         title={"About Page"}
